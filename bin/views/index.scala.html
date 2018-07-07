@@ -1,20 +1,24 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(message: String)
-
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
-
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @play20.welcome(message, style = "Java")
+@* <meta charset="utf-8"> FOR ECLIPSE CHARSET DETECTION *@
+@(message: String,header: String)
+@main(message,header) {
+<div class="container">
+<form action = '/login' method = 'post' class="form-signin">
+    	<div class="form-group">
+    		
+        <label for="inputEmail">めーる:</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="めーる" required autofocus>
+        <label for="inputPassword">あんごう:</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="あんごう" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> ぱすわーどをきおくする
+          </label>
+        </div>
+        <button class="btn btn-info btn-block" type="submit">鳥井をくぐる</button>
+    </div>
+</form>
+    		<a href="/makeNewAccount">せろまんどぅるぎ</a><br><a href="/makeNewPassword">ぴぼんいじょぼりょった</a>
+			
+</div>
 
 }

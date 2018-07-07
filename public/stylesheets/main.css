@@ -1,0 +1,29 @@
+.top{
+	-webkit-text-size-adjust: none;
+	font-size: 1000px;
+	color: #FFFFFF;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+h1{
+	font-size: 100px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.jumbotron { 
+	background:url(../images/headImg.jpg) center no-repeat; 
+	background-size: cover;
+}
+
+.pull-right {
+  float: right !important;
+}
+

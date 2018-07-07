@@ -1,23 +1,24 @@
-@*
- * This template is called from the `index` template. This template
- * handles the rendering of the page header and body tags. It takes
- * two arguments, a `String` for the title of the page and an `Html`
- * object to insert into the body of the page.
- *@
-@(title: String)(content: Html)
+@* <meta charset="utf-8"> FOR ECLIPSE CHARSET DETECTION *@
+@(title: String,header: String)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @* Here's where we render the page title `String`. *@
-        <title>@title</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
-        <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+        <title>@title</title>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="@routes.Assets.versioned("images/favicon.ico")">
     </head>
     <body>
-        @* And here's where we render the `Html` object containing
-         * the page content. *@
+    <div class="jumbotron">
+    <div class="container-fluid">
+    <div class="top">
+    <h1>@header</h1>
+    </div>
+    </div>
+    </div>
         @content
     </body>
 </html>
