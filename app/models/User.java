@@ -45,7 +45,7 @@ public class User extends Model{
 	private Date createDate;
 	
 	/* 更新日*/
-	@UpdatedTimestamp
+	@Version
 	private Date updateDate;
 	
 	/* 削除フラグ*/
